@@ -25,15 +25,15 @@ TRIP_FILES = {
 
 # Create trip files
 TRIP_COMMANDS = [
-    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['carRush']} -p 2 -e 6000 --prefix c_ --vehicle-class passenger --trip-attributes \"guiShape='passenger'\"",
-    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['carQuiet']} -p 5 -e 6000 --prefix c_ --vehicle-class passenger --trip-attributes \"guiShape='passenger'\"",
-    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['carDefault']} -p 2.5 -e 6000 --prefix c_ --vehicle-class passenger --trip-attributes \"guiShape='passenger'\"",
-    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['busRush']} -p 20 -e 6000 --prefix b_ --vehicle-class bus --trip-attributes \"guiShape='bus'\"",
-    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['busQuiet']} -p 50 -e 6000 --prefix b_ --vehicle-class bus --trip-attributes \"guiShape='bus'\"",
-    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['busDefault']} -p 37 -e 6000 --prefix b_ --vehicle-class bus --trip-attributes \"guiShape='bus'\"",
+    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['carRush']} -p 1 -e 6000 --prefix c_ --vehicle-class passenger --trip-attributes \"guiShape='passenger'\"",
+    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['carQuiet']} -p 3 -e 6000 --prefix c_ --vehicle-class passenger --trip-attributes \"guiShape='passenger'\"",
+    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['carDefault']} -p 2 -e 6000 --prefix c_ --vehicle-class passenger --trip-attributes \"guiShape='passenger'\"",
+    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['busRush']} -p 10 -e 6000 --prefix b_ --vehicle-class bus --trip-attributes \"guiShape='bus'\"",
+    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['busQuiet']} -p 30 -e 6000 --prefix b_ --vehicle-class bus --trip-attributes \"guiShape='bus'\"",
+    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['busDefault']} -p 20 -e 6000 --prefix b_ --vehicle-class bus --trip-attributes \"guiShape='bus'\"",
     f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['truckRush']} -p 10 -e 6000 --prefix t_ --vehicle-class truck --trip-attributes \"guiShape='truck'\"",
-    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['truckQuiet']} -p 50 -e 6000 --prefix t_ --vehicle-class truck --trip-attributes \"guiShape='truck'\"",
-    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['truckDefault']} -p 37 -e 6000 --prefix t_ --vehicle-class truck --trip-attributes \"guiShape='truck'\"",
+    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['truckQuiet']} -p 30 -e 6000 --prefix t_ --vehicle-class truck --trip-attributes \"guiShape='truck'\"",
+    f"python {RANDOM_SCRIPT} -n {NET_FILE} -o {TRIP_FILES['truckDefault']} -p 20 -e 6000 --prefix t_ --vehicle-class truck --trip-attributes \"guiShape='truck'\"",
 ]
 
 # Create route files

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-01-26 23:01:47.249601 by Eclipse SUMO randomTrips.py v1_25_0+0000-ac6c5a6752d
+<!-- generated on 2026-01-26 23:27:38.149535 by Eclipse SUMO randomTrips.py v1_25_0+0000-ac6c5a6752d
 <configuration>
     <net-file value="osm.net.xml"/>
     <output-trip-file value="trips/truckRush.trips.xml"/>
