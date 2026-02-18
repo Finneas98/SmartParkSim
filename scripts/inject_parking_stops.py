@@ -86,9 +86,9 @@ def main():
     ap.add_argument("--routes", required=True, help="Input route file (.rou.xml)")
     ap.add_argument("--add", required=True, help="Parking areas additional file (.add.xml)")
     ap.add_argument("--out", required=True, help="Output route file (.rou.xml)")
-    ap.add_argument("--rate", type=float, default=0.12, help="Fraction of vehicles to park (0-1). Default 0.12")
-    ap.add_argument("--dur-min", type=int, default=300, help="Min parking duration (seconds). Default 300")
-    ap.add_argument("--dur-max", type=int, default=1800, help="Max parking duration (seconds). Default 1800")
+    ap.add_argument("--rate", type=float, default=0.5, help="Fraction of vehicles to park (0-1). Default 0.5")
+    ap.add_argument("--dur-min", type=int, default=500, help="Min parking duration (seconds). Default 500")
+    ap.add_argument("--dur-max", type=int, default=3000, help="Max parking duration (seconds). Default 3000")
     ap.add_argument("--seed", type=int, default=42, help="Random seed for repeatability. Default 42")
 
     args = ap.parse_args()
