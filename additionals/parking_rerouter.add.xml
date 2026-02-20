@@ -1,0 +1,12 @@
+<additional>
+    <rerouter id="parkSearchA" edges="213545293.15 213545293.71 213545293.87">
+        <interval begin="0" end="6000">
+            <!-- Treat all parking areas as alternatives -->
+            <parkingAreaReroute id="pa_0" visible="true" probability="16"/>
+            <parkingAreaReroute id="pa_1" visible="true" probability="16"/>
+            <parkingAreaReroute id="pa_2" visible="true" probability="5"/>
+            <parkingAreaReroute id="pa_3" visible="true" probability="17"/>
+            <parkingAreaReroute id="pa_4" visible="true" probability="17"/>
+        </interval>
+    </rerouter>
+</additional>
