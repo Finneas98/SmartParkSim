@@ -7,8 +7,8 @@
 
     <input>
         <net-file value="osm.net.xml"/>
-        <additional-files value="osm.poly.xml.gz, additionals/parkingAreas.add.xml"/>
-        <route-files value="routes/default_with_parking.rou.xml"/>
+        <additional-files value="osm.poly.xml.gz, additionals/parkingAreas.add.xml, additionals/parking_rerouter.add.xml"/>
+        <route-files value="routes/parking_default_withstops.rou.xml"/>
     </input>
 
     <processing>

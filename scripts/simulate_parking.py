@@ -115,7 +115,7 @@ if __name__ == "__main__":
     ROUTES_DIR = os.path.abspath(os.path.join(script_dir, "..", "routes"))
     rush_route    = os.path.join(ROUTES_DIR, "rush.rou.xml")
     quiet_route   = os.path.join(ROUTES_DIR, "quiet.rou.xml")
-    default_route = os.path.join(ROUTES_DIR, "default_with_parking.rou.xml")
+    default_route = os.path.join(ROUTES_DIR, "parking_default_withstops.rou.xml")
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--route-quiet", action="store_true", help="Quiet traffic")
