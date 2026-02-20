@@ -64,6 +64,10 @@ def update_parking_occupancy(parking_area_id, occupied_count, total_cap):
     # Reference to the specific parking lot document
     parking_lot_ref = db.collection('parking_lots').document(parking_area_id)
 
+    parking_lot_ref.set({
+        "name": f"Parking Lot {parking_area_id}"
+    }, merge=True)
+
     # Reference to the occupancy_records subcollection for this parking lot
     occupancy_ref = parking_lot_ref.collection('occupancy_records').document(str(timestamp_ms))
 
