@@ -9,4 +9,44 @@
             <parkingAreaReroute id="pa_4" visible="true" probability="17"/>
         </interval>
     </rerouter>
+    <rerouter id="parkSearchB" edges="1425285203 -1425285203 288974437#1 288974437#1.34">
+        <interval begin="0" end="6000">
+            <!-- Treat all parking areas as alternatives -->
+            <parkingAreaReroute id="pa_5" visible="true" probability="8"/>
+            <parkingAreaReroute id="pa_6" visible="true" probability="8"/>
+            <parkingAreaReroute id="pa_7" visible="true" probability="17"/>
+            <parkingAreaReroute id="pa_8" visible="true" probability="10"/>
+            <parkingAreaReroute id="pa_9" visible="true" probability="13"/>
+        </interval>
+    </rerouter>
+    <rerouter id="parkSearchC" edges="1416317269#1 1416317269#2 1416317675.11 1416317675.21 1416317269#4 -1416317269#4
+    1416317270 -1416317270 1416317674 -1416317674 1416317676#0 1416317676#1 1416317676#1.14 -1416317676#1.21
+    1416317676#1.70 1416317677 -1416317677 1416317676#2 1416317269#8 -E0 1416317269#6 1416317269#5">
+        <interval begin="0" end="6000">
+            <!-- Treat all parking areas as alternatives -->
+            <parkingAreaReroute id="pa_10" visible="true" probability="4"/>
+            <parkingAreaReroute id="pa_11" visible="true" probability="3"/>
+            <parkingAreaReroute id="pa_12" visible="true" probability="4"/>
+            <parkingAreaReroute id="pa_13" visible="true" probability="7"/>
+            <parkingAreaReroute id="pa_14" visible="true" probability="8"/>
+            <parkingAreaReroute id="pa_15" visible="true" probability="18"/>
+            <parkingAreaReroute id="pa_16" visible="true" probability="18"/>
+            <parkingAreaReroute id="pa_17" visible="true" probability="18"/>
+            <parkingAreaReroute id="pa_18" visible="true" probability="18"/>
+            <parkingAreaReroute id="pa_19" visible="true" probability="18"/>
+            <parkingAreaReroute id="pa_20" visible="true" probability="18"/>
+            <parkingAreaReroute id="pa_21" visible="true" probability="5"/>
+            <parkingAreaReroute id="pa_22" visible="true" probability="5"/>
+            <parkingAreaReroute id="pa_23" visible="true" probability="2"/>
+            <parkingAreaReroute id="pa_24" visible="true" probability="16"/>
+            <parkingAreaReroute id="pa_25" visible="true" probability="6"/>
+            <parkingAreaReroute id="pa_26" visible="true" probability="5"/>
+            <parkingAreaReroute id="pa_27" visible="true" probability="21"/>
+            <parkingAreaReroute id="pa_28" visible="true" probability="16"/>
+            <parkingAreaReroute id="pa_29" visible="true" probability="20"/>
+            <parkingAreaReroute id="pa_30" visible="true" probability="5"/>
+            <parkingAreaReroute id="pa_31" visible="true" probability="6"/>
+            <parkingAreaReroute id="pa_32" visible="true" probability="5"/>
+        </interval>
+    </rerouter>
 </additional>

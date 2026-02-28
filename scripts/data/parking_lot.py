@@ -4,9 +4,15 @@ import traci
 
 @dataclass(frozen=True)
 class ParkingLot:
-    lot_id: str                 # e.g. "A"
+    lot_id: str
+    name: str
     parking_area_ids: List[str] # e.g. ["pa_0", "pa_1", ...]
+    latitude: float
+    longitude: float
     total_capacity: int | None = None
+    last_updated: str | None = None
+    occupied_spaces: int = 0
+
 
     def total_occupancy(self) -> int:
         """Sum occupancy across all parking areas in this lot."""
