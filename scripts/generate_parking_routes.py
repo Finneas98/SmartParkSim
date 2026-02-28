@@ -22,19 +22,19 @@ ROUTES_DIR = "routes"
 # randomTrips period (smaller = busier)
 SCENARIOS = {
     "busy": {
-        "period": 5,
+        "period": 3,
         "park_rate": 0.70,
         "dur_min": 300,
         "dur_max": 1200,
     },
     "default": {
-        "period": 10,
+        "period": 6,
         "park_rate": 0.50,
         "dur_min": 600,
         "dur_max": 1800,
     },
     "quiet": {
-        "period": 15,
+        "period": 9,
         "park_rate": 0.30,
         "dur_min": 900,
         "dur_max": 2400,
@@ -56,29 +56,47 @@ def ensure_dirs():
     Path(ROUTES_DIR).mkdir(parents=True, exist_ok=True)
 
 
+def edge_from_lane(lane_id: str) -> str:
+    """
+    lane id format: "<edge>_<laneIndex>"
+    edge may contain dots/#, so split from the right.
+    """
+    return lane_id.rsplit("_", 1)[0]
+
+
 def parse_parking_areas(additional_path: Path):
+    """
+    Returns a list of parking areas with their edge and weight:
+    [
+      {"id": "pa_0", "edge": "213545293.15", "weight": 16},
+      ...
+    ]
+    """
     tree = ET.parse(additional_path)
     root = tree.getroot()
 
-    ids = []
-    weights = []
+    parking = []
 
     for pa in root.findall(".//parkingArea"):
         pa_id = pa.get("id")
-        if not pa_id:
+        lane = pa.get("lane")
+        if not pa_id or not lane:
             continue
 
+        edge = edge_from_lane(lane)
+
         cap = pa.get("roadsideCapacity") or pa.get("capacity")
-        w = int(cap) if cap and cap.isdigit() else 1
+        weight = int(cap) if cap and cap.isdigit() else 1
 
-        ids.append(pa_id)
-        weights.append(w)
+        parking.append({"id": pa_id, "edge": edge, "weight": weight})
 
-    if not ids:
-        raise ValueError("No parkingArea elements found.")
+    if not parking:
+        raise ValueError("No parkingArea elements found (with id + lane).")
 
-    print(f"Detected {len(ids)} parking areas: {ids}")
-    return ids, weights
+    print(f"Detected {len(parking)} parking areas.")
+    # optional: print the ids
+    # print([p["id"] for p in parking])
+    return parking
 
 
 def choose_weighted(rng, items, weights):
@@ -92,8 +110,13 @@ def choose_weighted(rng, items, weights):
     return items[-1]
 
 
-def inject_parking_stops(route_in, route_out, parking_ids, parking_weights,
+def inject_parking_stops(route_in, route_out, parking_areas,
                          park_rate, dur_min, dur_max, seed):
+    """
+    Route-aware injection:
+    only assigns a parkingArea if its EDGE appears in the vehicle's route edges.
+    This prevents "parkingArea is not downstream the current route" warnings.
+    """
     rng = random.Random(seed)
 
     tree = ET.parse(route_in)
@@ -101,19 +124,44 @@ def inject_parking_stops(route_in, route_out, parking_ids, parking_weights,
 
     vehicles = root.findall(".//vehicle")
     injected = 0
+    skipped_no_match = 0
+    skipped_no_route = 0
+    already_had_stop = 0
 
     for v in vehicles:
         if v.find("stop") is not None:
+            already_had_stop += 1
             continue
 
-        if rng.random() <= park_rate:
-            pa = choose_weighted(rng, parking_ids, parking_weights)
-            dur = rng.randint(dur_min, dur_max)
-            v.append(ET.Element("stop", {
-                "parkingArea": pa,
-                "duration": str(dur)
-            }))
-            injected += 1
+        if rng.random() > park_rate:
+            continue
+
+        route_el = v.find("route")
+        if route_el is None:
+            skipped_no_route += 1
+            continue
+
+        edges_str = route_el.get("edges", "")
+        route_edges = edges_str.split()
+        if not route_edges:
+            skipped_no_route += 1
+            continue
+
+        # Only choose parking areas that are on this route
+        compatible = [p for p in parking_areas if p["edge"] in route_edges]
+
+        if not compatible:
+            skipped_no_match += 1
+            continue
+
+        pa_ids = [p["id"] for p in compatible]
+        weights = [p["weight"] for p in compatible]
+
+        chosen_pa = choose_weighted(rng, pa_ids, weights)
+        dur = rng.randint(dur_min, dur_max)
+
+        v.append(ET.Element("stop", {"parkingArea": chosen_pa, "duration": str(dur)}))
+        injected += 1
 
     try:
         ET.indent(tree, space="  ", level=0)
@@ -123,6 +171,10 @@ def inject_parking_stops(route_in, route_out, parking_ids, parking_weights,
     tree.write(route_out, encoding="utf-8", xml_declaration=True)
 
     print(f"Injected {injected} parking stops into {route_out}")
+    print(f"Skipped (no compatible parking on route): {skipped_no_match}")
+    print(f"Skipped (missing/empty route): {skipped_no_route}")
+    if already_had_stop:
+        print(f"Vehicles that already had a stop: {already_had_stop}")
 
 
 # =========================
@@ -138,7 +190,7 @@ def main():
 
     ensure_dirs()
 
-    parking_ids, parking_weights = parse_parking_areas(Path(PARKING_ADD_FILE))
+    parking_areas = parse_parking_areas(Path(PARKING_ADD_FILE))
 
     for index, (name, cfg) in enumerate(SCENARIOS.items()):
         print(f"\n========== GENERATING {name.upper()} SCENARIO ==========")
@@ -175,14 +227,13 @@ def main():
         )
         run_command(route_command)
 
-        # 3) Inject parking stops
+        # 3) Inject parking stops (route-aware)
         scenario_seed = base_seed + index * 1000
 
         inject_parking_stops(
             route_in=routes_tmp,
             route_out=routes_final,
-            parking_ids=parking_ids,
-            parking_weights=parking_weights,
+            parking_areas=parking_areas,
             park_rate=cfg["park_rate"],
             dur_min=cfg["dur_min"],
             dur_max=cfg["dur_max"],

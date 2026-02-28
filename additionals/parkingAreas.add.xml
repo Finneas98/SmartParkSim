@@ -1,93 +1,449 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-02-11T00:46:14.698632+00:00 by Eclipse SUMO netedit 1.25.0
+<!-- generated on 2026-02-28T11:37:48.922361+00:00 by Eclipse SUMO netedit 1.25.0
 -->
-
-<!-- Total spaces = 75 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <!-- StoppingPlaces -->
     <parkingArea id="pa_0" lane="213545293.15_0" startPos="0.00" endPos="48.30" width="6.00" lefthand="1">
-        <space x="1372.74" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1375.74" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1378.74" y="1086.57" width="2.50" length="5.50"/>
-        <space x="1381.83" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1384.83" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1387.74" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1390.74" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1393.66" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1396.83" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1399.83" y="1086.65" width="2.50" length="5.50"/>
-        <space x="1402.99" y="1086.57" width="2.50" length="5.50"/>
-        <space x="1405.91" y="1086.40" width="2.50" length="5.50"/>
-        <space x="1408.91" y="1086.57" width="2.50" length="5.50"/>
-        <space x="1411.83" y="1086.48" width="2.50" length="5.50"/>
-        <space x="1414.83" y="1086.48" width="2.50" length="5.50"/>
-        <space x="1417.64" y="1086.51" width="2.50" length="5.50"/>
+        <space x="1372.74" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1375.74" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1378.74" y="1086.57" width="2.20" length="5.50"/>
+        <space x="1381.83" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1384.83" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1387.74" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1390.74" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1393.66" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1396.83" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1399.83" y="1086.65" width="2.20" length="5.50"/>
+        <space x="1402.99" y="1086.57" width="2.20" length="5.50"/>
+        <space x="1405.91" y="1086.40" width="2.20" length="5.50"/>
+        <space x="1408.91" y="1086.57" width="2.20" length="5.50"/>
+        <space x="1411.83" y="1086.48" width="2.20" length="5.50"/>
+        <space x="1414.83" y="1086.48" width="2.20" length="5.50"/>
+        <space x="1417.64" y="1086.51" width="2.20" length="5.50"/>
     </parkingArea>
     <parkingArea id="pa_1" lane="213545293.15_0" startPos="0.00" endPos="48.43" width="6.00">
-        <space x="1372.99" y="1098.56" width="2.50" length="5.50"/>
-        <space x="1375.99" y="1098.73" width="2.50" length="5.50"/>
-        <space x="1379.00" y="1098.56" width="2.50" length="5.50"/>
-        <space x="1382.08" y="1098.48" width="2.50" length="5.50"/>
-        <space x="1384.99" y="1098.39" width="2.50" length="5.50"/>
-        <space x="1387.91" y="1098.48" width="2.50" length="5.50"/>
-        <space x="1390.83" y="1098.64" width="2.50" length="5.50"/>
-        <space x="1393.83" y="1098.73" width="2.50" length="5.50"/>
-        <space x="1396.83" y="1098.56" width="2.50" length="5.50"/>
-        <space x="1399.83" y="1098.73" width="2.50" length="5.50"/>
-        <space x="1402.91" y="1098.48" width="2.50" length="5.50"/>
-        <space x="1405.83" y="1098.56" width="2.50" length="5.50"/>
-        <space x="1408.74" y="1098.39" width="2.50" length="5.50"/>
-        <space x="1411.74" y="1098.39" width="2.50" length="5.50"/>
-        <space x="1414.83" y="1098.39" width="2.50" length="5.50"/>
-        <space x="1417.91" y="1098.64" width="2.50" length="5.50"/>
+        <space x="1372.99" y="1098.56" width="2.20" length="5.50"/>
+        <space x="1375.99" y="1098.73" width="2.20" length="5.50"/>
+        <space x="1379.00" y="1098.56" width="2.20" length="5.50"/>
+        <space x="1382.08" y="1098.48" width="2.20" length="5.50"/>
+        <space x="1384.99" y="1098.39" width="2.20" length="5.50"/>
+        <space x="1387.91" y="1098.48" width="2.20" length="5.50"/>
+        <space x="1390.83" y="1098.64" width="2.20" length="5.50"/>
+        <space x="1393.83" y="1098.73" width="2.20" length="5.50"/>
+        <space x="1396.83" y="1098.56" width="2.20" length="5.50"/>
+        <space x="1399.83" y="1098.73" width="2.20" length="5.50"/>
+        <space x="1402.91" y="1098.48" width="2.20" length="5.50"/>
+        <space x="1405.83" y="1098.56" width="2.20" length="5.50"/>
+        <space x="1408.74" y="1098.39" width="2.20" length="5.50"/>
+        <space x="1411.74" y="1098.39" width="2.20" length="5.50"/>
+        <space x="1414.83" y="1098.39" width="2.20" length="5.50"/>
+        <space x="1417.91" y="1098.64" width="2.20" length="5.50"/>
+    </parkingArea>
+    <parkingArea id="pa_10" lane="1416317269#1_0" startPos="0.37" endPos="9.37" width="5.00">
+        <space x="1116.99" y="1225.65" width="2.20" length="5.50" angle="147.00"/>
+        <space x="1114.99" y="1226.93" width="2.20" length="5.50" angle="147.00"/>
+        <space x="1113.05" y="1228.18" width="2.20" length="5.50" angle="147.00"/>
+        <space x="1111.05" y="1229.49" width="2.20" length="5.50" angle="147.00"/>
+    </parkingArea>
+    <parkingArea id="pa_11" lane="1416317269#2_0" startPos="0.00" endPos="6.25" width="5.00">
+        <space x="1103.73" y="1234.06" width="2.20" length="5.50" angle="150.00"/>
+        <space x="1101.67" y="1235.28" width="2.20" length="5.50" angle="150.00"/>
+        <space x="1099.60" y="1236.52" width="2.20" length="5.50" angle="150.00"/>
+    </parkingArea>
+    <parkingArea id="pa_12" lane="1416317675.11_0" startPos="0.07" endPos="9.87" width="5.00">
+        <space x="1083.69" y="1223.33" width="2.20" length="5.50" angle="143.00"/>
+        <space x="1081.69" y="1224.82" width="2.20" length="5.50" angle="143.00"/>
+        <space x="1079.74" y="1226.31" width="2.20" length="5.50" angle="143.00"/>
+        <space x="1077.85" y="1227.79" width="2.20" length="5.50" angle="143.00"/>
+    </parkingArea>
+    <parkingArea id="pa_13" lane="1416317675.21_0" startPos="1.04" endPos="16.87" width="5.00" lefthand="1">
+        <space x="1094.06" y="1239.55" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1092.47" y="1237.75" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1090.88" y="1235.95" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1089.32" y="1234.18" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1087.75" y="1232.42" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1086.15" y="1230.62" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1084.58" y="1228.82" width="2.20" length="5.50" angle="48.50"/>
+    </parkingArea>
+    <parkingArea id="pa_14" lane="1416317675.21_0" startPos="0.16" endPos="17.89" width="5.00">
+        <space x="1076.14" y="1233.66" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1077.73" y="1235.45" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1079.33" y="1237.25" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1080.90" y="1239.06" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1082.49" y="1240.83" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1084.08" y="1242.65" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1085.65" y="1244.44" width="2.20" length="5.50" angle="48.50"/>
+        <space x="1087.22" y="1246.24" width="2.20" length="5.50" angle="48.50"/>
+    </parkingArea>
+    <parkingArea id="pa_15" lane="1416317269#4_0" startPos="0.00" endPos="44.00" width="5.00">
+        <space x="1093.19" y="1252.56" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1094.49" y="1254.67" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1095.74" y="1256.75" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1097.02" y="1258.81" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1098.33" y="1260.89" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1099.58" y="1263.01" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1100.87" y="1265.10" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1102.14" y="1267.22" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1103.44" y="1269.27" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1104.76" y="1271.36" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1106.01" y="1273.43" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1107.29" y="1275.51" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1108.58" y="1277.57" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1109.83" y="1279.69" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1111.08" y="1281.77" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1112.37" y="1283.79" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1113.62" y="1285.82" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1114.87" y="1287.88" width="2.20" length="5.50" angle="58.50"/>
+    </parkingArea>
+    <parkingArea id="pa_16" lane="-1416317269#4_0" startPos="0.55" endPos="44.55" width="5.00">
+        <space x="1104.02" y="1246.00" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1105.28" y="1248.06" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1106.49" y="1250.15" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1107.80" y="1252.18" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1109.05" y="1254.24" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1110.30" y="1256.29" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1111.58" y="1258.34" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1112.82" y="1260.40" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1114.09" y="1262.45" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1115.38" y="1264.51" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1116.68" y="1266.59" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1117.94" y="1268.67" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1119.29" y="1270.88" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1120.62" y="1272.94" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1121.88" y="1275.03" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1123.14" y="1277.12" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1124.39" y="1279.22" width="2.20" length="5.50" angle="58.50"/>
+        <space x="1125.67" y="1281.29" width="2.20" length="5.50" angle="58.50"/>
+    </parkingArea>
+    <parkingArea id="pa_17" lane="1416317270_0" startPos="2.54" endPos="46.54" width="5.00">
+        <space x="1130.72" y="1278.61" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1129.53" y="1276.54" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1128.31" y="1274.47" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1125.87" y="1270.32" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1127.09" y="1272.39" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1124.66" y="1268.25" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1123.41" y="1266.21" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1122.20" y="1264.07" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1120.97" y="1261.95" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1119.71" y="1259.86" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1118.43" y="1257.64" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1117.15" y="1255.48" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1115.88" y="1253.36" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1114.62" y="1251.19" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1113.34" y="1249.08" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1112.10" y="1246.93" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1110.88" y="1244.81" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1109.64" y="1242.70" width="2.20" length="5.50" angle="59.50"/>
+    </parkingArea>
+    <parkingArea id="pa_18" lane="-1416317270_0" startPos="0.15" endPos="44.15" width="5.00">
+        <space x="1141.54" y="1272.12" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1140.33" y="1270.06" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1139.13" y="1268.00" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1137.94" y="1265.92" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1136.71" y="1263.85" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1135.48" y="1261.79" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1134.27" y="1259.78" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1133.12" y="1257.70" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1131.91" y="1255.63" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1130.71" y="1253.54" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1129.50" y="1251.47" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1128.20" y="1249.30" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1126.97" y="1247.21" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1125.67" y="1245.02" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1124.37" y="1242.81" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1123.02" y="1240.61" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1121.78" y="1238.42" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1120.52" y="1236.31" width="2.20" length="5.50" angle="59.50"/>
+    </parkingArea>
+    <parkingArea id="pa_19" lane="1416317674_0" startPos="2.80" endPos="46.80" width="5.00">
+        <space x="1146.41" y="1269.20" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1145.21" y="1267.13" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1143.98" y="1265.05" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1142.75" y="1262.97" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1141.52" y="1260.93" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1140.33" y="1258.84" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1139.10" y="1256.77" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1137.91" y="1254.70" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1136.70" y="1252.62" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1135.46" y="1250.54" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1134.26" y="1248.48" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1133.05" y="1246.42" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1131.84" y="1244.34" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1130.55" y="1242.16" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1129.30" y="1240.00" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1128.05" y="1237.84" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1126.75" y="1235.63" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1125.45" y="1233.46" width="2.20" length="5.50" angle="59.50"/>
     </parkingArea>
     <parkingArea id="pa_2" lane="213545293.71_0" startPos="0.00" endPos="13.82" width="6.00">
-        <space x="1432.86" y="1089.82" width="2.50" length="5.50" angle="90.00"/>
-        <space x="1432.91" y="1083.94" width="2.50" length="5.50" angle="90.00"/>
-        <space x="1432.85" y="1086.87" width="2.50" length="5.50" angle="90.00"/>
-        <space x="1432.90" y="1081.00" width="2.50" length="5.50" angle="90.00"/>
-        <space x="1432.89" y="1078.19" width="2.50" length="5.50" angle="90.00"/>
+        <space x="1432.86" y="1089.82" width="2.20" length="5.50" angle="90.00"/>
+        <space x="1432.91" y="1083.94" width="2.20" length="5.50" angle="90.00"/>
+        <space x="1432.85" y="1086.87" width="2.20" length="5.50" angle="90.00"/>
+        <space x="1432.90" y="1081.00" width="2.20" length="5.50" angle="90.00"/>
+        <space x="1432.89" y="1078.19" width="2.20" length="5.50" angle="90.00"/>
+    </parkingArea>
+    <parkingArea id="pa_20" lane="-1416317674_0" startPos="0.18" endPos="44.18" width="5.00">
+        <space x="1157.89" y="1263.19" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1156.66" y="1261.11" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1155.45" y="1259.03" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1154.21" y="1256.96" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1152.99" y="1254.85" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1151.73" y="1252.79" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1150.50" y="1250.71" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1149.26" y="1248.65" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1148.01" y="1246.56" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1146.77" y="1244.42" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1145.53" y="1242.32" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1144.29" y="1240.22" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1142.98" y="1238.08" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1141.66" y="1235.90" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1140.38" y="1233.76" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1139.11" y="1231.61" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1137.83" y="1229.53" width="2.20" length="5.50" angle="59.50"/>
+        <space x="1136.62" y="1227.41" width="2.20" length="5.50" angle="59.50"/>
+    </parkingArea>
+    <parkingArea id="pa_21" lane="1416317269#5_0" startPos="0.48" endPos="11.31" width="5.00">
+        <space x="1126.35" y="1290.91" width="2.20" length="5.50" angle="-33.00"/>
+        <space x="1128.36" y="1289.61" width="2.20" length="5.50" angle="-33.00"/>
+        <space x="1130.38" y="1288.36" width="2.20" length="5.50" angle="-33.00"/>
+        <space x="1132.44" y="1287.15" width="2.20" length="5.50" angle="-33.00"/>
+        <space x="1134.44" y="1285.88" width="2.20" length="5.50" angle="-33.00"/>
+    </parkingArea>
+    <parkingArea id="pa_22" lane="1416317269#6_0" startPos="0.07" endPos="11.07" width="5.00">
+        <space x="1141.74" y="1282.18" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1143.80" y="1280.98" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1145.86" y="1279.79" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1147.90" y="1278.57" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1149.97" y="1277.35" width="2.20" length="5.50" angle="-30.00"/>
+    </parkingArea>
+    <parkingArea id="pa_23" lane="-E0_0" startPos="0.03" endPos="4.53" width="5.00">
+        <space x="1158.22" y="1273.04" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1160.31" y="1271.84" width="2.20" length="5.50" angle="-30.00"/>
+    </parkingArea>
+    <parkingArea id="pa_24" lane="-1416317677_0" startPos="0.06" endPos="39.06" width="5.00">
+        <space x="1131.46" y="1296.63" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1133.48" y="1295.34" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1135.48" y="1294.05" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1137.51" y="1292.77" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1139.54" y="1291.47" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1141.54" y="1290.18" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1143.55" y="1288.87" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1145.53" y="1287.57" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1147.56" y="1286.28" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1149.57" y="1285.00" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1151.59" y="1283.72" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1153.60" y="1282.45" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1155.62" y="1281.17" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1157.63" y="1279.87" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1159.58" y="1278.71" width="2.20" length="5.50" angle="-32.50"/>
+        <space x="1161.71" y="1277.52" width="2.20" length="5.50" angle="-32.50"/>
+    </parkingArea>
+    <parkingArea id="pa_25" lane="1416317676#0_0" startPos="0.00" endPos="13.00" width="5.00">
+        <space x="1119.82" y="1295.36" width="2.20" length="5.50" angle="57.50"/>
+        <space x="1121.11" y="1297.38" width="2.20" length="5.50" angle="57.50"/>
+        <space x="1122.39" y="1299.39" width="2.20" length="5.50" angle="57.50"/>
+        <space x="1123.66" y="1301.41" width="2.20" length="5.50" angle="57.50"/>
+        <space x="1124.94" y="1303.39" width="2.20" length="5.50" angle="57.50"/>
+        <space x="1126.20" y="1305.39" width="2.20" length="5.50" angle="57.50"/>
+    </parkingArea>
+    <parkingArea id="pa_26" lane="1416317676#1_0" startPos="0.00" endPos="11.00" width="5.00">
+        <space x="1130.81" y="1313.14" width="2.20" length="5.50" angle="55.00"/>
+        <space x="1132.18" y="1315.12" width="2.20" length="5.50" angle="55.00"/>
+        <space x="1133.49" y="1317.09" width="2.20" length="5.50" angle="55.00"/>
+        <space x="1134.84" y="1319.06" width="2.20" length="5.50" angle="55.00"/>
+        <space x="1136.16" y="1321.02" width="2.20" length="5.50" angle="55.00"/>
+    </parkingArea>
+    <parkingArea id="pa_27" lane="1416317676#1.14_0" startPos="0.10" endPos="49.10" width="5.00">
+        <space x="1146.85" y="1323.91" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1148.92" y="1322.73" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1150.99" y="1321.52" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1153.09" y="1320.33" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1157.22" y="1317.93" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1159.29" y="1316.73" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1155.14" y="1319.12" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1161.36" y="1315.53" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1163.43" y="1314.33" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1165.51" y="1313.12" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1167.59" y="1311.92" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1169.64" y="1310.74" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1171.71" y="1309.53" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1173.78" y="1308.35" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1175.86" y="1307.17" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1177.93" y="1305.97" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1179.99" y="1304.78" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1182.05" y="1303.55" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1184.13" y="1302.36" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1186.18" y="1301.18" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1188.26" y="1299.99" width="2.20" length="5.50" angle="-30.00"/>
+    </parkingArea>
+    <parkingArea id="pa_28" lane="1416317677_0" startPos="0.32" endPos="39.32" width="5.00">
+        <space x="1137.62" y="1307.93" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1139.59" y="1306.63" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1141.60" y="1305.32" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1143.60" y="1304.07" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1145.60" y="1302.76" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1147.58" y="1301.40" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1149.63" y="1300.11" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1151.63" y="1298.78" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1153.64" y="1297.48" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1155.63" y="1296.17" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1157.63" y="1294.87" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1159.61" y="1293.55" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1161.62" y="1292.23" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1163.68" y="1290.98" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1165.79" y="1289.81" width="2.20" length="5.50" angle="-34.00"/>
+        <space x="1167.87" y="1288.56" width="2.20" length="5.50" angle="-34.00"/>
+    </parkingArea>
+    <parkingArea id="pa_29" lane="-1416317676#1.21_0" startPos="0.00" endPos="49.00" width="5.00">
+        <space x="1140.88" y="1312.55" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1142.95" y="1311.40" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1145.00" y="1310.22" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1147.04" y="1309.03" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1149.04" y="1307.85" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1151.11" y="1306.69" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1153.16" y="1305.48" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1155.25" y="1304.35" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1157.30" y="1303.14" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1159.37" y="1301.95" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1161.42" y="1300.77" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1163.52" y="1299.59" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1165.60" y="1298.42" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1167.67" y="1297.22" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1169.74" y="1296.04" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1171.82" y="1294.85" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1173.90" y="1293.66" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1175.97" y="1292.47" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1178.03" y="1291.30" width="2.20" length="5.50" angle="-30.00"/>
+        <space x="1180.07" y="1290.15" width="2.20" length="5.50" angle="-30.00"/>
     </parkingArea>
     <parkingArea id="pa_3" lane="213545293.87_0" startPos="0.00" endPos="54.00" width="6.00" lefthand="1">
-        <space x="1368.77" y="1075.98" width="2.50" length="5.50"/>
-        <space x="1371.56" y="1076.04" width="2.50" length="5.50"/>
-        <space x="1374.36" y="1076.02" width="2.50" length="5.50"/>
-        <space x="1377.25" y="1076.02" width="2.50" length="5.50"/>
-        <space x="1380.09" y="1075.89" width="2.50" length="5.50"/>
-        <space x="1383.04" y="1075.85" width="2.50" length="5.50"/>
-        <space x="1385.99" y="1076.05" width="2.50" length="5.50"/>
-        <space x="1389.00" y="1076.05" width="2.50" length="5.50"/>
-        <space x="1392.04" y="1076.09" width="2.50" length="5.50"/>
-        <space x="1395.09" y="1076.00" width="2.50" length="5.50"/>
-        <space x="1398.03" y="1076.02" width="2.50" length="5.50"/>
-        <space x="1401.03" y="1075.90" width="2.50" length="5.50"/>
-        <space x="1404.15" y="1075.89" width="2.50" length="5.50"/>
-        <space x="1407.16" y="1075.81" width="2.50" length="5.50"/>
-        <space x="1410.17" y="1075.84" width="2.50" length="5.50"/>
-        <space x="1413.30" y="1075.76" width="2.50" length="5.50"/>
-        <space x="1416.25" y="1075.86" width="2.50" length="5.50"/>
-        <space x="1419.42" y="1075.78" width="2.50" length="5.50"/>
+        <space x="1368.77" y="1075.98" width="2.20" length="5.50"/>
+        <space x="1371.56" y="1076.04" width="2.20" length="5.50"/>
+        <space x="1374.36" y="1076.02" width="2.20" length="5.50"/>
+        <space x="1377.25" y="1076.02" width="2.20" length="5.50"/>
+        <space x="1380.09" y="1075.89" width="2.20" length="5.50"/>
+        <space x="1383.04" y="1075.85" width="2.20" length="5.50"/>
+        <space x="1385.99" y="1076.05" width="2.20" length="5.50"/>
+        <space x="1389.00" y="1076.05" width="2.20" length="5.50"/>
+        <space x="1392.04" y="1076.09" width="2.20" length="5.50"/>
+        <space x="1395.09" y="1076.00" width="2.20" length="5.50"/>
+        <space x="1398.03" y="1076.02" width="2.20" length="5.50"/>
+        <space x="1401.03" y="1075.90" width="2.20" length="5.50"/>
+        <space x="1404.15" y="1075.89" width="2.20" length="5.50"/>
+        <space x="1407.16" y="1075.81" width="2.20" length="5.50"/>
+        <space x="1410.17" y="1075.84" width="2.20" length="5.50"/>
+        <space x="1413.30" y="1075.76" width="2.20" length="5.50"/>
+        <space x="1416.25" y="1075.86" width="2.20" length="5.50"/>
+        <space x="1419.42" y="1075.78" width="2.20" length="5.50"/>
+    </parkingArea>
+    <parkingArea id="pa_30" lane="1416317676#2_0" startPos="0.14" endPos="12.14" width="5.00">
+        <space x="1177.46" y="1275.20" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1176.45" y="1273.04" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1175.41" y="1270.88" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1174.35" y="1268.70" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1173.31" y="1266.47" width="2.20" length="5.50" angle="65.00"/>
+    </parkingArea>
+    <parkingArea id="pa_31" lane="1416317269#8_0" startPos="0.27" endPos="13.30" width="5.00">
+        <space x="1169.07" y="1257.32" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1168.08" y="1255.18" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1167.09" y="1253.01" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1166.08" y="1250.86" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1165.04" y="1248.69" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1170.07" y="1259.46" width="2.20" length="5.50" angle="65.00"/>
+    </parkingArea>
+    <parkingArea id="pa_32" lane="1416317676#1.70_0" startPos="0.00" endPos="12.00" width="5.00">
+        <space x="1195.98" y="1287.32" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1194.93" y="1285.16" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1193.88" y="1282.98" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1192.84" y="1280.78" width="2.20" length="5.50" angle="65.00"/>
+        <space x="1191.80" y="1278.59" width="2.20" length="5.50" angle="65.00"/>
     </parkingArea>
     <parkingArea id="pa_4" lane="213545293.87_0" startPos="0.00" endPos="54.00" width="6.00">
-        <space x="1368.61" y="1064.24" width="2.50" length="5.50"/>
-        <space x="1371.48" y="1064.20" width="2.50" length="5.50"/>
-        <space x="1374.29" y="1064.16" width="2.50" length="5.50"/>
-        <space x="1377.35" y="1064.16" width="2.50" length="5.50"/>
-        <space x="1380.29" y="1064.19" width="2.50" length="5.50"/>
-        <space x="1383.21" y="1064.10" width="2.50" length="5.50"/>
-        <space x="1386.21" y="1064.05" width="2.50" length="5.50"/>
-        <space x="1389.17" y="1064.14" width="2.50" length="5.50"/>
-        <space x="1392.08" y="1063.97" width="2.50" length="5.50"/>
-        <space x="1395.13" y="1063.93" width="2.50" length="5.50"/>
-        <space x="1398.21" y="1064.05" width="2.50" length="5.50"/>
-        <space x="1401.29" y="1064.14" width="2.50" length="5.50"/>
-        <space x="1404.25" y="1063.91" width="2.50" length="5.50"/>
-        <space x="1407.21" y="1064.04" width="2.50" length="5.50"/>
-        <space x="1410.37" y="1063.92" width="2.50" length="5.50"/>
-        <space x="1413.45" y="1063.79" width="2.50" length="5.50"/>
-        <space x="1416.40" y="1063.92" width="2.50" length="5.50"/>
-        <space x="1419.56" y="1063.88" width="2.50" length="5.50"/>
+        <space x="1368.61" y="1064.24" width="2.20" length="5.50"/>
+        <space x="1371.48" y="1064.20" width="2.20" length="5.50"/>
+        <space x="1374.29" y="1064.16" width="2.20" length="5.50"/>
+        <space x="1377.35" y="1064.16" width="2.20" length="5.50"/>
+        <space x="1380.29" y="1064.19" width="2.20" length="5.50"/>
+        <space x="1383.21" y="1064.10" width="2.20" length="5.50"/>
+        <space x="1386.21" y="1064.05" width="2.20" length="5.50"/>
+        <space x="1389.17" y="1064.14" width="2.20" length="5.50"/>
+        <space x="1392.08" y="1063.97" width="2.20" length="5.50"/>
+        <space x="1395.13" y="1063.93" width="2.20" length="5.50"/>
+        <space x="1398.21" y="1064.05" width="2.20" length="5.50"/>
+        <space x="1401.29" y="1064.14" width="2.20" length="5.50"/>
+        <space x="1404.25" y="1063.91" width="2.20" length="5.50"/>
+        <space x="1407.21" y="1064.04" width="2.20" length="5.50"/>
+        <space x="1410.37" y="1063.92" width="2.20" length="5.50"/>
+        <space x="1413.45" y="1063.79" width="2.20" length="5.50"/>
+        <space x="1416.40" y="1063.92" width="2.20" length="5.50"/>
+        <space x="1419.56" y="1063.88" width="2.20" length="5.50"/>
+    </parkingArea>
+    <parkingArea id="pa_5" lane="1425285203_0" startPos="0.00" endPos="19.11" width="5.50">
+        <space x="1345.02" y="1199.82" width="2.20" length="5.50" angle="-94.50"/>
+        <space x="1346.40" y="1216.77" width="2.20" length="5.50" angle="-94.50"/>
+        <space x="1346.20" y="1214.38" width="2.20" length="5.50" angle="-94.50"/>
+        <space x="1346.00" y="1211.94" width="2.20" length="5.50" angle="-94.50"/>
+        <space x="1345.81" y="1209.50" width="2.20" length="5.50" angle="-94.50"/>
+        <space x="1345.58" y="1207.09" width="2.20" length="5.50" angle="-94.50"/>
+        <space x="1345.42" y="1204.69" width="2.20" length="5.50" angle="-94.50"/>
+        <space x="1345.19" y="1202.28" width="2.20" length="5.50" angle="-94.50"/>
+    </parkingArea>
+    <parkingArea id="pa_6" lane="-1425285203_0" startPos="0.72" endPos="19.83" width="5.50">
+        <space x="1365.99" y="1215.19" width="2.20" length="5.50" angle="86.00"/>
+        <space x="1365.78" y="1212.75" width="2.20" length="5.50" angle="86.00"/>
+        <space x="1365.63" y="1210.39" width="2.20" length="5.50" angle="86.00"/>
+        <space x="1365.45" y="1207.99" width="2.20" length="5.50" angle="86.00"/>
+        <space x="1365.10" y="1203.22" width="2.20" length="5.50" angle="86.00"/>
+        <space x="1364.91" y="1200.82" width="2.20" length="5.50" angle="86.00"/>
+        <space x="1364.74" y="1198.39" width="2.20" length="5.50" angle="86.00"/>
+        <space x="1365.27" y="1205.62" width="2.20" length="5.50" angle="86.00"/>
+    </parkingArea>
+    <parkingArea id="pa_7" lane="288974437#1.34_0" startPos="0.00" endPos="38.00" width="5.50">
+        <space x="1363.71" y="1178.09" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1366.11" y="1178.08" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1368.48" y="1178.01" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1370.86" y="1177.97" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1373.26" y="1177.95" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1375.64" y="1177.91" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1378.02" y="1177.87" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1380.39" y="1177.87" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1382.78" y="1177.83" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1385.13" y="1177.79" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1387.50" y="1177.77" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1389.90" y="1177.72" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1392.29" y="1177.68" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1394.66" y="1177.65" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1397.03" y="1177.64" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1399.38" y="1177.57" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1401.74" y="1177.54" width="2.20" length="5.50" angle="-0.50"/>
+    </parkingArea>
+    <parkingArea id="pa_8" lane="288974437#1.34_0" startPos="8.66" endPos="32.66" width="5.50" lefthand="1">
+        <space x="1392.48" y="1188.68" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1390.01" y="1188.73" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1387.49" y="1188.77" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1385.01" y="1188.81" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1382.48" y="1188.85" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1379.99" y="1188.85" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1377.55" y="1188.93" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1375.12" y="1189.01" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1372.63" y="1189.01" width="2.20" length="5.50" angle="-0.50"/>
+        <space x="1370.11" y="1189.05" width="2.20" length="5.50" angle="-0.50"/>
+    </parkingArea>
+    <parkingArea id="pa_9" lane="288974437#1_0" startPos="0.14" endPos="30.14" width="5.50">
+        <space x="1371.23" y="1200.53" width="2.20" length="5.50"/>
+        <space x="1373.69" y="1200.48" width="2.20" length="5.50"/>
+        <space x="1376.26" y="1200.53" width="2.20" length="5.50"/>
+        <space x="1378.77" y="1200.58" width="2.20" length="5.50"/>
+        <space x="1381.25" y="1200.57" width="2.20" length="5.50"/>
+        <space x="1383.81" y="1200.52" width="2.20" length="5.50"/>
+        <space x="1386.28" y="1200.48" width="2.20" length="5.50"/>
+        <space x="1388.75" y="1200.48" width="2.20" length="5.50"/>
+        <space x="1391.21" y="1200.43" width="2.20" length="5.50"/>
+        <space x="1393.78" y="1200.47" width="2.20" length="5.50"/>
+        <space x="1396.35" y="1200.47" width="2.20" length="5.50"/>
+        <space x="1398.82" y="1200.42" width="2.20" length="5.50"/>
+        <space x="1401.33" y="1200.42" width="2.20" length="5.50"/>
     </parkingArea>
 </additional>
