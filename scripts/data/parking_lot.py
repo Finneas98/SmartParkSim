@@ -6,12 +6,15 @@ import traci
 class ParkingLot:
     lot_id: str
     name: str
+    campus_id: str
+    campus_name: str
     parking_area_ids: List[str] # e.g. ["pa_0", "pa_1", ...]
     latitude: float
     longitude: float
     total_capacity: int | None = None
     last_updated: str | None = None
     occupied_spaces: int = 0
+    available_spaces: int = 0
 
 
     def total_occupancy(self) -> int:
@@ -21,4 +24,5 @@ class ParkingLot:
     def availability(self) -> int:
         """How many spaces are available (not below zero)."""
         return max(0, self.total_capacity - self.total_occupancy())
+
 
