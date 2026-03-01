@@ -13,6 +13,7 @@ import sumolib
 import traci
 
 from data.parking_lot import ParkingLot
+from data.campus import Campus
 
 cred = credentials.Certificate('smartpark-ece66-firebase-adminsdk-fbsvc-3bbe69f955.json')
 firebase_admin.initialize_app(cred)
@@ -26,39 +27,55 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 SUMO_CONFIG = os.path.join(script_dir, "..", "osm.sumocfg")
 SUMO_CONFIG = os.path.abspath(SUMO_CONFIG)  # normalize to full path
 
+campuses = [
+    Campus(
+        id="TUS_MOY",
+        name="TUS Moylish",
+    )
+]
+
 lots = [
-    ParkingLot(lot_id="CP_StudentH",
-               name="Student Hub Car Park",
-               parking_area_ids=["pa_0", "pa_1", "pa_2", "pa_3", "pa_4"],
-               latitude=52.67462053273498,
-               longitude=-8.64537353886789,
-               total_capacity=75
-               ),
-    ParkingLot(lot_id="CP_Astro",
-               name="Astro Car Park",
-               parking_area_ids=["pa_5", "pa_6", "pa_7", "pa_8", "pa_9"],
-               latitude=52.675614247229596,
-               longitude=-8.645693861100769,
-               total_capacity=55
-               ),
-    ParkingLot(lot_id="CP_SportsH",
-               name="Sports Hub Car Park",
-               parking_area_ids=["pa_10", "pa_11", "pa_12", "pa_13", "pa_14", "pa_15", "pa_16", "pa_17", "pa_18",
-                                 "pa_19", "pa_20", "pa_21", "pa_22", "pa_23", "pa_24", "pa_25", "pa_26", "pa_27",
-                                 "pa_28", "pa_29", "pa_30", "pa_31", "pa_32"],
-               latitude=52.676319572017015,
-               longitude=-8.649204651492045,
-               total_capacity=246
-               ),
+    ParkingLot(
+        lot_id="CP_StudentH",
+        name="Student Hub Car Park",
+        campus_id="TUS_MOY",
+        campus_name="TUS Moylish",
+        parking_area_ids=["pa_0", "pa_1", "pa_2", "pa_3", "pa_4"],
+        latitude=52.67462053273498,
+        longitude=-8.64537353886789,
+        total_capacity=75
+    ),
+    ParkingLot(
+        lot_id="CP_Astro",
+        name="Astro Car Park",
+        campus_id="TUS_MOY",
+        campus_name="TUS Moylish",
+        parking_area_ids=["pa_5", "pa_6", "pa_7", "pa_8", "pa_9"],
+        latitude=52.675614247229596,
+        longitude=-8.645693861100769,
+        total_capacity=55
+    ),
+    ParkingLot(
+        lot_id="CP_SportsH",
+        name="Sports Hub Car Park",
+        campus_id="TUS_MOY",
+        campus_name="TUS Moylish",
+        parking_area_ids=["pa_10", "pa_11", "pa_12", "pa_13", "pa_14", "pa_15", "pa_16", "pa_17", "pa_18",
+                         "pa_19", "pa_20", "pa_21", "pa_22", "pa_23", "pa_24", "pa_25", "pa_26", "pa_27",
+                         "pa_28", "pa_29", "pa_30", "pa_31", "pa_32"],
+        latitude=52.676319572017015,
+        longitude=-8.649204651492045,
+        total_capacity=246
+    ),
     # Add more lots later:
     # ParkingLot("B", ["pa_5", "pa_6"], total_capacity=40),
 ]
 
 def clear_occupancy_records():
     print("Clearing all previous occupancy records...")
-    for parking_lot in lots:
-        parking_lot_ref = db.collection('parking_lots').document(parking_lot.lot_id)
-        occupancy_records_ref = parking_lot_ref.collection('occupancy_records')
+    for campus in campuses:
+        campus_ref = db.collection('parking_lots').document(campus.id)
+        occupancy_records_ref = campus_ref.collection('occupancy_records')
 
         # Get all documents in the subcollection
         docs = occupancy_records_ref.stream()
@@ -73,7 +90,7 @@ def clear_occupancy_records():
                 batch.commit()
                 batch = db.batch() # Start a new batch
         batch.commit() # Commit any remaining deletions
-        print(f"Cleared {count} records for parking area: {parking_lot.lot_id}")
+        print(f"Cleared {count} records for campus: {campus.id}")
     print("All occupancy records cleared.")
 
 
@@ -93,22 +110,43 @@ def update_parking_occupancy(lot: ParkingLot, occupied_count: int):
             "occupied_spaces": occupied_count,
             # Prefer server time for consistency across machines
             "last_updated": firestore.SERVER_TIMESTAMP,
+            "available_spaces": lot.total_capacity - occupied_count,
+        },
+        merge=True,
+    )
+
+    print(
+        f"Lot {lot.lot_id} updated: {occupied_count}/{lot.total_capacity} occupied."
+    )
+
+
+def update_campus_stats(campus: Campus, total_occupancy: int, total_capacity: int):
+    now = datetime.datetime.now(datetime.timezone.utc)
+    timestamp_ms = int(now.timestamp() * 1000)
+
+    campus_ref = db.collection("campus").document(campus.name)
+
+    campus_ref.set(
+        {
+            "id": campus.id,
+            "name": campus.name,
+            "total_occupancy": total_occupancy,
+            "total_capacity": total_capacity,
+            "total_available": total_capacity - total_occupancy,
+            "last_updated": firestore.SERVER_TIMESTAMP,
         },
         merge=True,
     )
 
     # 2) Historical record in subcollection
-    occupancy_ref = parking_lot_ref.collection("occupancy_records").document(str(timestamp_ms))
+    occupancy_ref = campus_ref.collection("occupancy_records").document(str(timestamp_ms))
     occupancy_ref.set(
         {
             "timestamp": firestore.SERVER_TIMESTAMP,
-            "occupied_spaces": occupied_count,
-            "total_capacity": lot.total_capacity,
+            "occupied_spaces": total_occupancy,
+            "total_capacity": total_capacity,
+            "available_spaces": total_capacity - total_occupancy,
         }
-    )
-
-    print(
-        f"Lot {lot.lot_id} updated: {occupied_count}/{lot.total_capacity} occupied."
     )
 
 
@@ -127,9 +165,18 @@ def run_sumo(route_file):
         now = traci.simulation.getTime()
 
         if step % 60 == 0:
+            total_capacity = 0
+            total_occupied = 0
             for lot in lots:
                 occ = lot.total_occupancy()
+                total_capacity += lot.total_capacity
+                total_occupied += occ
                 update_parking_occupancy(lot, occ)
+
+            for campus in campuses:
+                if campus.id == "TUS_MOY":
+                    update_campus_stats(campus, total_occupied, total_capacity)
+
 
     traci.close()
 
