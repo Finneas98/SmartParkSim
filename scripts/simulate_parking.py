@@ -31,6 +31,8 @@ campuses = [
     Campus(
         id="TUS_MOY",
         name="TUS Moylish",
+        latitude = 52.67501072630342,
+        longitude = -8.648763697538072,
     )
 ]
 
@@ -41,8 +43,8 @@ lots = [
         campus_id="TUS_MOY",
         campus_name="TUS Moylish",
         parking_area_ids=["pa_0", "pa_1", "pa_2", "pa_3", "pa_4"],
-        latitude=52.67462053273498,
-        longitude=-8.64537353886789,
+        latitude=52.67467623796441,
+        longitude=-8.645356246703612,
         total_capacity=75
     ),
     ParkingLot(
@@ -51,8 +53,8 @@ lots = [
         campus_id="TUS_MOY",
         campus_name="TUS Moylish",
         parking_area_ids=["pa_5", "pa_6", "pa_7", "pa_8", "pa_9"],
-        latitude=52.675614247229596,
-        longitude=-8.645693861100769,
+        latitude=52.67566701644293,
+        longitude=-8.646173539091807,
         total_capacity=55
     ),
     ParkingLot(
@@ -63,8 +65,8 @@ lots = [
         parking_area_ids=["pa_10", "pa_11", "pa_12", "pa_13", "pa_14", "pa_15", "pa_16", "pa_17", "pa_18",
                          "pa_19", "pa_20", "pa_21", "pa_22", "pa_23", "pa_24", "pa_25", "pa_26", "pa_27",
                          "pa_28", "pa_29", "pa_30", "pa_31", "pa_32"],
-        latitude=52.676319572017015,
-        longitude=-8.649204651492045,
+        latitude=52.676214833295525,
+        longitude=-8.648920665886697,
         total_capacity=246
     ),
     # Add more lots later:
@@ -105,6 +107,8 @@ def update_parking_occupancy(lot: ParkingLot, occupied_count: int):
         {
             "id": lot.lot_id,
             "name": lot.name,
+            "campus_id": lot.campus_id,
+            "campus_name": lot.campus_name,
             "location": GeoPoint(lot.latitude, lot.longitude),
             "total_capacity": lot.total_capacity,
             "occupied_spaces": occupied_count,
@@ -130,6 +134,7 @@ def update_campus_stats(campus: Campus, total_occupancy: int, total_capacity: in
         {
             "id": campus.id,
             "name": campus.name,
+            "location": GeoPoint(campus.latitude, campus.longitude),
             "total_occupancy": total_occupancy,
             "total_capacity": total_capacity,
             "total_available": total_capacity - total_occupancy,
