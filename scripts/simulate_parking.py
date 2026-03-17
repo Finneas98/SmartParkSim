@@ -76,7 +76,7 @@ lots = [
 def clear_occupancy_records():
     print("Clearing all previous occupancy records...")
     for campus in campuses:
-        campus_ref = db.collection('parking_lots').document(campus.id)
+        campus_ref = db.collection('campus').document(campus.name)
         occupancy_records_ref = campus_ref.collection('occupancy_records')
 
         # Get all documents in the subcollection
