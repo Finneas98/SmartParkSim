@@ -2,8 +2,6 @@
 # @author  Fionnán Ó Cualáin
 # @date    17-02-2026
 import os
-import json
-from collections import defaultdict
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
@@ -12,8 +10,9 @@ import datetime
 import sumolib
 import traci
 
-from data.parking_lot import ParkingLot
-from data.campus import Campus
+from scripts.data.parking_lot import ParkingLot
+from scripts.data.campus import Campus
+from scripts.util.parking_utils import build_campus_payload, build_parking_lot_payload
 
 cred = credentials.Certificate('smartpark-ece66-firebase-adminsdk-fbsvc-3bbe69f955.json')
 firebase_admin.initialize_app(cred)
@@ -102,22 +101,9 @@ def update_parking_occupancy(lot: ParkingLot, occupied_count: int):
 
     parking_lot_ref = db.collection("parking_lots").document(lot.name)
 
+    payload = build_parking_lot_payload(lot, occupied_count)
     # 1) Real-time fields stored on the parent document
-    parking_lot_ref.set(
-        {
-            "id": lot.lot_id,
-            "name": lot.name,
-            "campus_id": lot.campus_id,
-            "campus_name": lot.campus_name,
-            "location": GeoPoint(lot.latitude, lot.longitude),
-            "total_capacity": lot.total_capacity,
-            "occupied_spaces": occupied_count,
-            # Prefer server time for consistency across machines
-            "last_updated": firestore.SERVER_TIMESTAMP,
-            "available_spaces": lot.total_capacity - occupied_count,
-        },
-        merge=True,
-    )
+    parking_lot_ref.set(payload, merge=True)
 
     print(
         f"Lot {lot.lot_id} updated: {occupied_count}/{lot.total_capacity} occupied."
@@ -130,18 +116,9 @@ def update_campus_stats(campus: Campus, total_occupancy: int, total_capacity: in
 
     campus_ref = db.collection("campus").document(campus.name)
 
-    campus_ref.set(
-        {
-            "id": campus.id,
-            "name": campus.name,
-            "location": GeoPoint(campus.latitude, campus.longitude),
-            "total_occupancy": total_occupancy,
-            "total_capacity": total_capacity,
-            "total_available": total_capacity - total_occupancy,
-            "last_updated": firestore.SERVER_TIMESTAMP,
-        },
-        merge=True,
-    )
+    payload = build_campus_payload(campus, total_occupancy, total_capacity)
+
+    campus_ref.set(payload, merge=True)
 
     # 2) Historical record in subcollection
     occupancy_ref = campus_ref.collection("occupancy_records").document(str(timestamp_ms))
