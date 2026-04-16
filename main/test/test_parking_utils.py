@@ -1,7 +1,7 @@
 from types import SimpleNamespace
-from scripts.data.parking_lot import ParkingLot
-from scripts.data.campus import Campus
-import scripts.util.parking_utils as parking_utils
+from main.data.parking_lot import ParkingLot
+from main.data.campus import Campus
+import main.util.parking_utils as parking_utils
 
 
 def test_build_parking_lot_payload_returns_expected_structure(monkeypatch):

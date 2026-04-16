@@ -1,5 +1,5 @@
 from types import SimpleNamespace
-import scripts.simulate_parking as simulate_parking
+import main.simulate_parking as simulate_parking
 
 
 class FakeDocumentRef:

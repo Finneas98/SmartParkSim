@@ -10,11 +10,14 @@ import datetime
 import sumolib
 import traci
 
-from scripts.data.parking_lot import ParkingLot
-from scripts.data.campus import Campus
-from scripts.util.parking_utils import build_campus_payload, build_parking_lot_payload
+from main.data.parking_lot import ParkingLot
+from main.data.campus import Campus
+from main.util.parking_utils import build_campus_payload, build_parking_lot_payload
 
-cred = credentials.Certificate('smartpark-ece66-firebase-adminsdk-fbsvc-3bbe69f955.json')
+current_dir = os.path.dirname(__file__)
+json_path = os.path.join(current_dir, 'smartpark-ece66-firebase-adminsdk-fbsvc-3bbe69f955.json')
+
+cred = credentials.Certificate(json_path)
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
@@ -165,18 +168,18 @@ def run_sumo(route_file):
 if __name__ == "__main__":
     import argparse
     ROUTES_DIR = os.path.abspath(os.path.join(script_dir, "..", "routes"))
-    rush_route    = os.path.join(ROUTES_DIR, "rush.rou.xml")
-    quiet_route   = os.path.join(ROUTES_DIR, "quiet.rou.xml")
+    busy_route    = os.path.join(ROUTES_DIR, "parking_busy_withstops.rou.xml")
+    quiet_route   = os.path.join(ROUTES_DIR, "parking_quiet_withstops.rou.xml")
     default_route = os.path.join(ROUTES_DIR, "parking_default_withstops.rou.xml")
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--route-quiet", action="store_true", help="Quiet traffic")
-    parser.add_argument("--route-rush", action="store_true", help="Rush hour traffic")
+    parser.add_argument("--route-busy", action="store_true", help="Rush hour traffic")
 
     args = parser.parse_args()
 
-    if args.route_rush:
-        run_sumo(rush_route)
+    if args.route_busy:
+        run_sumo(busy_route)
     elif args.route_quiet:
         run_sumo(quiet_route)
     else:

@@ -1,4 +1,4 @@
-from scripts.data.parking_lot import ParkingLot
+from main.data.parking_lot import ParkingLot
 
 def test_total_occupancy_sums_all_parking_areas(monkeypatch):
     counts = {

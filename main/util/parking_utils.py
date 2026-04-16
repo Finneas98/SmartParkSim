@@ -1,8 +1,8 @@
 from firebase_admin import firestore
 from google.cloud.firestore import GeoPoint
 
-from scripts.data.parking_lot import ParkingLot
-from scripts.data.campus import Campus
+from main.data.parking_lot import ParkingLot
+from main.data.campus import Campus
 
 
 
