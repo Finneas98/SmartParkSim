@@ -1,63 +1,138 @@
-# SmartParkSim
-Network and script files for SUMO Digital Twin for SmartPark app
+# 🚗 Smart Parking Digital Twin – Backend
 
-This backend is responsible for running a SUMO-based digital twin simulation of the TUS Moylish campus and streaming real-time parking data to Firebase Firestore.
+## 📌 Overview
+This backend runs a SUMO-based digital twin simulation of the TUS Moylish campus and streams real-time parking data to Firebase Firestore.
 
 It:
+- Simulates traffic and parking behaviour using SUMO  
+- Extracts live parking occupancy via TraCI  
+- Processes data using Python  
+- Stores real-time and historical data in Firestore  
 
-Simulates traffic and parking behaviour using SUMO
-Extracts live parking occupancy via TraCI
-Processes and structures data in Python
-Writes real-time and historical data to Firestore
+---
 
-Requirements
-Python Version
-Python 3.10 recommended
-Compatible with Python 3.9+
+## ⚙️ Requirements
 
-Setting Up a Virtual Environment
+### 🐍 Python Version
+- Python 3.10 recommended  
+- Compatible with Python 3.9+
 
-python -m venv venv
+---
 
-Activate Virtual Environment
+## 📦 Required Python Packages
 
-venv\Scripts\activate
+Install dependencies:
 
-Install Dependencies
+pip install firebase-admin  
+pip install google-cloud-firestore  
+pip install sumolib  
+pip install traci  
 
-pip install firebase-admin
-pip install google-cloud-firestore
-pip install sumolib
-pip install traci
-pip install python-dotenv
+---
 
-Firebase Setup
+## 🧪 Virtual Environment Setup
+
+### 1. Create Virtual Environment
+python -m venv venv  
+
+### 2. Activate Virtual Environment
+
+Windows:
+venv\Scripts\activate  
+
+macOS / Linux:
+source venv/bin/activate  
+
+### 3. Install Dependencies
+pip install firebase-admin google-cloud-firestore sumolib traci  
+
+---
+
+## 🔐 Firebase Setup (IMPORTANT)
 
 You must place your Firebase Admin SDK JSON file in the main backend folder.
 
-Required:
-Download Firebase Admin SDK JSON
-Place it in the same directory as the main script
+### Example Structure:
+backend/  
+│── simulate_parking.py  
+│── smartpark-xxxx-firebase-adminsdk.json  
 
-/main
+### Important:
+The script expects the JSON file name:
 
-SUMO Setup
+smartpark-ece66-firebase-adminsdk-fbsvc-3bbe69f955.json  
 
-You must have SUMO installed and configured.
+If your file name is different, update this line in simulate_parking.py:
 
-Requirements:
-SUMO installed and added to system PATH
-sumo-gui executable available
+json_path = os.path.join(current_dir, 'YOUR_FILE_NAME.json')  
 
-Running the Simulation
-Default Mode:
-python simulate_parking.py
+---
 
-Quiet Traffic:
-python simulate_parking.py --route-quiet
+## 🚦 SUMO Setup
 
-Busy Traffic:
-python simulate_parking.py --route-busy
+You must have SUMO installed and available in your system PATH.
 
-Press play in the top left corner of sumo gui to start the simulation
-Choose a delay to modify speed of sim
+Test installation:
+sumo-gui  
+
+---
+
+## ▶️ Running the Simulation
+
+Default:
+python simulate_parking.py  
+
+Quiet traffic:
+python simulate_parking.py --route-quiet  
+
+Busy traffic:
+python simulate_parking.py --route-busy  
+
+---
+
+## ▶️ Starting the Simulation
+
+Press the play button in the top left of the SUMO GUI
+
+Select a delay number to choose simulation speed (to the right of play button)
+
+---
+
+## 🔄 What Happens When It Runs
+
+1. SUMO simulation starts  
+2. Previous occupancy records are cleared from Firestore  
+3. Simulation runs step-by-step  
+4. Every 60 steps:
+   - Parking occupancy is calculated  
+   - Data is written to Firestore  
+   - Campus statistics are updated  
+5. Historical data is stored for analytics  
+
+---
+
+## 🗂️ Project Structure
+
+backend/  
+│── simulate_parking.py  
+│── main/  
+│   ├── data/  
+│   ├── util/  
+│── routes/  
+│── osm.sumocfg  
+│── firebase-admin-sdk.json  
+
+---
+
+## ⚠️ Troubleshooting
+
+- Ensure Firebase JSON file is correctly placed  
+- Ensure SUMO is installed and accessible  
+- Check osm.sumocfg path if simulation fails  
+- Verify Firebase credentials if data is not updating   
+
+---
+
+## 👨‍💻 Author
+Fionnán Ó Cualáin  
+BSc. Internet Systems Development
